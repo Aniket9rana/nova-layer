@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solidale Infotech - Premium Video Editing Services</title>
+    <title>Solidale Infotech - Premium Logo Design Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Black Theme Styles */
@@ -322,6 +322,59 @@
             transform: translateX(4px);
         }
 
+        /* Portfolio Section */
+        .portfolio {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .portfolio-item {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+            background: rgba(17, 17, 17, 0.8);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 0, 255, 0.3);
+        }
+
+        .portfolio-img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 4px 10px rgba(255, 0, 255, 0.3));
+        }
+
+        .portfolio-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .portfolio-category {
+            font-size: 0.9rem;
+            color: var(--accent);
+        }
+
         /* Modal Styles */
         .modal-overlay {
             position: fixed;
@@ -455,25 +508,40 @@
             top: -2px;
         }
 
-        /* Video Demo Section */
-        .video-demo {
+        /* Process Section */
+        .process {
             padding: 4rem 0;
             text-align: center;
         }
 
-        .video-container {
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(255, 0, 255, 0.2);
-            border: 1px solid rgba(255, 0, 255, 0.2);
+        .process-steps {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
-        .video-container iframe {
-            width: 100%;
-            height: 450px;
-            border: none;
+        .process-step {
+            background: rgba(17, 17, 17, 0.8);
+            border-radius: 16px;
+            padding: 2rem;
+            width: 250px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 0, 255, 0.1);
+        }
+
+        .process-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #ff00ff, #ff69b4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: 700;
         }
 
         /* Animations */
@@ -514,8 +582,13 @@
                 padding: 2rem 1.5rem;
             }
             
-            .video-container iframe {
-                height: 350px;
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .process-steps {
+                flex-direction: column;
+                align-items: center;
             }
         }
 
@@ -532,8 +605,8 @@
                 padding: 1.5rem;
             }
             
-            .video-container iframe {
-                height: 250px;
+            .portfolio-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -546,13 +619,11 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <img src="./images/NL-removebg-preview.png" width="75" height="75" alt="">
-                </div>
+                <div class="logo">  <img src="./images/NL-removebg-preview.png" width="75" height="75" alt=""></div>
                 <nav>
                     <ul>
                         <li><a href="home.html">Home</a></li>
-                        <li><a href="#" class="active">Video Editing</a></li>
+                        <li><a href="#" class="active">Logo Design</a></li>
                        
                     </ul>
                 </nav>
@@ -564,17 +635,17 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Professional Video Editing Services</h1>
-                <p class="hero-subtitle">Transform your raw footage into stunning visual stories with our award-winning video editing team</p>
-                <p class="hero-subtitle">With over 10 years of experience in the industry, we create compelling videos that captivate audiences and deliver your message powerfully.</p>
+                <h1 class="hero-title">Professional Logo Design Services</h1>
+                <p class="hero-subtitle">Create a memorable brand identity with our custom logo designs that communicate your values and attract your ideal customers.</p>
+                <p class="hero-subtitle">With over 10 years of experience in branding, we craft logos that stand the test of time while making a powerful first impression.</p>
                 
                 <div class="features">
                     <ul>
-                        <li>Hollywood-style editing techniques</li>
-                        <li>4K/8K resolution support</li>
-                        <li>Motion graphics & visual effects</li>
-                        <li>Color grading & correction</li>
-                        <li>Fast turnaround times</li>
+                        <li>Strategic brand analysis</li>
+                        <li>Multiple unique concepts</li>
+                        <li>Custom typography</li>
+                        <li>Vector file formats</li>
+                        <li>3-day turnaround</li>
                         <li>Unlimited revisions</li>
                     </ul>
                 </div>
@@ -585,65 +656,128 @@
     <!-- Services Section -->
     <section class="services">
         <div class="container">
-            <h2 class="section-title">Our Video Editing Services</h2>
+            <h2 class="section-title">Our Logo Design Services</h2>
             <div class="services-grid">
-                <!-- Commercial Videos -->
+                <!-- Brand Identity -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2991/2991483.png" alt="Commercial Videos" class="card-img">
-                    <h3>Commercial Videos</h3>
-                    <p>High-impact video ads that boost conversions and brand awareness. Perfect for TV, social media, and digital campaigns.</p>
-                    <button class="learn-more-btn" data-service="commercial">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2779/2779775.png" alt="Brand Identity" class="card-img">
+                    <h3>Brand Identity</h3>
+                    <p>Complete branding packages including logo, color palette, typography, and brand guidelines.</p>
+                    <button class="learn-more-btn" data-service="branding">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Corporate Videos -->
+                <!-- Minimalist Logos -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3176/3176272.png" alt="Corporate Videos" class="card-img">
-                    <h3>Corporate Videos</h3>
-                    <p>Professional videos for businesses including explainers, training videos, product demos, and company profiles.</p>
-                    <button class="learn-more-btn" data-service="corporate">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" alt="Minimalist Logos" class="card-img">
+                    <h3>Minimalist Logos</h3>
+                    <p>Clean, simple designs that communicate your brand essence with elegance and clarity.</p>
+                    <button class="learn-more-btn" data-service="minimalist">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Social Media Videos -->
+                <!-- Mascot Logos -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3669/3669987.png" alt="Social Media Videos" class="card-img">
-                    <h3>Social Media Videos</h3>
-                    <p>Engaging short-form content optimized for Instagram, TikTok, YouTube Shorts, and other platforms.</p>
-                    <button class="learn-more-btn" data-service="social">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/1864/1864593.png" alt="Mascot Logos" class="card-img">
+                    <h3>Mascot Logos</h3>
+                    <p>Custom illustrated characters that personify your brand and create emotional connections.</p>
+                    <button class="learn-more-btn" data-service="mascot">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Music Videos -->
+                <!-- Typography Logos -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3659/3659898.png" alt="Music Videos" class="card-img">
-                    <h3>Music Videos</h3>
-                    <p>Creative music video production with visual storytelling that complements your audio perfectly.</p>
-                    <button class="learn-more-btn" data-service="music">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3652/3652191.png" alt="Typography Logos" class="card-img">
+                    <h3>Typography Logos</h3>
+                    <p>Custom lettering and wordmark designs that make your name the star of your brand.</p>
+                    <button class="learn-more-btn" data-service="typography">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Wedding Videos -->
+                <!-- 3D Logos -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3227/3227011.png" alt="Wedding Videos" class="card-img">
-                    <h3>Wedding Videos</h3>
-                    <p>Beautiful cinematic wedding films that capture your special day with emotion and artistry.</p>
-                    <button class="learn-more-btn" data-service="wedding">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2776/2776067.png" alt="3D Logos" class="card-img">
+                    <h3>3D Logos</h3>
+                    <p>Dimensional designs with depth and realism for a modern, high-tech appearance.</p>
+                    <button class="learn-more-btn" data-service="3d">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Animation -->
+                <!-- Logo Redesign -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2779/2779775.png" alt="Animation" class="card-img">
-                    <h3>2D/3D Animation</h3>
-                    <p>Custom animated videos including explainers, whiteboard animations, and 3D product visualizations.</p>
-                    <button class="learn-more-btn" data-service="animation">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/1063/1063199.png" alt="Logo Redesign" class="card-img">
+                    <h3>Logo Redesign</h3>
+                    <p>Modernize your existing logo while maintaining brand recognition and equity.</p>
+                    <button class="learn-more-btn" data-service="redesign">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Video Demo Section -->
-    <section class="video-demo">
+    <!-- Process Section -->
+    <section class="process">
         <div class="container">
-            <h2 class="section-title">Our Work Samples</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Editing Sample" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h2 class="section-title">Our Design Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h3>Discovery</h3>
+                    <p>We learn about your business, audience, and design preferences through a detailed questionnaire.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h3>Research</h3>
+                    <p>Our team analyzes your industry, competitors, and current trends to inform our designs.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h3>Concepting</h3>
+                    <p>We create multiple unique logo concepts that align with your brand identity.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <h3>Refinement</h3>
+                    <p>Based on your feedback, we refine the chosen concept to perfection.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">5</div>
+                    <h3>Delivery</h3>
+                    <p>You receive all final files in various formats along with brand guidelines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Our Logo Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/150/ff00ff/ffffff?text=Tech+Logo" alt="Tech Company Logo" class="portfolio-img">
+                    <h3 class="portfolio-title">Nexus Technologies</h3>
+                    <span class="portfolio-category">Minimalist Design</span>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/150/ff69b4/ffffff?text=Cafe+Logo" alt="Cafe Logo" class="portfolio-img">
+                    <h3 class="portfolio-title">Brew Haven</h3>
+                    <span class="portfolio-category">Mascot Design</span>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/150/9c27b0/ffffff?text=Fitness+Logo" alt="Fitness Logo" class="portfolio-img">
+                    <h3 class="portfolio-title">Iron Peak Fitness</h3>
+                    <span class="portfolio-category">Typography Design</span>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/150/e91e63/ffffff?text=Kids+Logo" alt="Kids Brand Logo" class="portfolio-img">
+                    <h3 class="portfolio-title">Tiny Explorers</h3>
+                    <span class="portfolio-category">Illustrative Design</span>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/150/2196f3/ffffff?text=Law+Logo" alt="Law Firm Logo" class="portfolio-img">
+                    <h3 class="portfolio-title">Summit Law Group</h3>
+                    <span class="portfolio-category">Professional Design</span>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/150/4caf50/ffffff?text=Organic+Logo" alt="Organic Brand Logo" class="portfolio-img">
+                    <h3 class="portfolio-title">Green Earth Organics</h3>
+                    <span class="portfolio-category">Eco-Friendly Design</span>
+                </div>
             </div>
         </div>
     </section>
@@ -776,177 +910,177 @@
 
             // Service content data
             const servicesData = {
-                commercial: {
-                    title: "Commercial Video Editing",
+                branding: {
+                    title: "Complete Brand Identity",
                     content: `
                         <div class="service-details">
-                            <h3>High-Impact Commercial Videos</h3>
-                            <p>Our commercial video editing service transforms your raw footage into compelling ads that drive conversions and brand recognition.</p>
+                            <h3>Comprehensive Branding Package</h3>
+                            <p>We create complete brand identities that communicate your values and differentiate you in the market.</p>
+                            
+                            <h4>Package Includes:</h4>
+                            <ul>
+                                <li>Primary logo design</li>
+                                <li>Alternative logo versions</li>
+                                <li>Custom color palette</li>
+                                <li>Typography system</li>
+                                <li>Brand pattern/textures</li>
+                                <li>Comprehensive brand guidelines</li>
+                            </ul>
+                            
+                            <h4>File Deliverables:</h4>
+                            <ul>
+                                <li>Vector files (AI, EPS, PDF)</li>
+                                <li>Transparent PNG files</li>
+                                <li>Print-ready files</li>
+                                <li>Social media kit</li>
+                                <li>Favicon package</li>
+                                <li>Brand guidelines PDF</li>
+                            </ul>
+                        </div>
+                    `
+                },
+                minimalist: {
+                    title: "Minimalist Logo Design",
+                    content: `
+                        <div class="service-details">
+                            <h3>Clean, Simple Logo Designs</h3>
+                            <p>We create minimalist logos that communicate your brand essence with elegance and clarity.</p>
                             
                             <h4>Key Features:</h4>
                             <ul>
-                                <li>Precise pacing for maximum impact</li>
-                                <li>Dynamic transitions and effects</li>
-                                <li>Professional color grading</li>
-                                <li>Sound design and audio mixing</li>
-                                <li>Optimized for all platforms (TV, social, web)</li>
-                                <li>Multiple versions for A/B testing</li>
+                                <li>Simplified visual elements</li>
+                                <li>Strategic negative space</li>
+                                <li>Modern typography</li>
+                                <li>Limited color palette</li>
+                                <li>Scalable designs</li>
+                                <li>Timeless appeal</li>
                             </ul>
+                            
+                            <h4>Best For:</h4>
+                            <ul>
+                                <li>Tech startups</li>
+                                <li>Professional services</li>
+                                <li>Luxury brands</li>
+                                <li>Modern lifestyle brands</li>
+                                <li>Architecture/design firms</li>
+                                <li>Minimalist aesthetics</li>
+                            </ul>
+                        </div>
+                    `
+                },
+                mascot: {
+                    title: "Mascot Logo Design",
+                    content: `
+                        <div class="service-details">
+                            <h3>Custom Character Mascots</h3>
+                            <p>We design memorable mascots that personify your brand and create emotional connections.</p>
                             
                             <h4>Our Process:</h4>
                             <ol>
-                                <li>Initial consultation to understand campaign goals</li>
-                                <li>Storyboard and concept development</li>
-                                <li>Footage review and selection</li>
-                                <li>Rough cut for approval</li>
-                                <li>Final editing with effects and audio</li>
-                                <li>Delivery in all required formats</li>
+                                <li>Character concept development</li>
+                                <li>Personality traits definition</li>
+                                <li>Initial sketch concepts</li>
+                                <li>Color palette exploration</li>
+                                <li>Final vector illustration</li>
+                                <li>Alternative expressions/poses</li>
                             </ol>
-                        </div>
-                    `
-                },
-                corporate: {
-                    title: "Corporate Video Editing",
-                    content: `
-                        <div class="service-details">
-                            <h3>Professional Corporate Videos</h3>
-                            <p>We create polished corporate videos that effectively communicate your message and enhance your brand image.</p>
                             
-                            <h4>Services Include:</h4>
+                            <h4>Style Options:</h4>
                             <ul>
-                                <li>Company profile videos</li>
-                                <li>Training and instructional videos</li>
-                                <li>Product demonstration videos</li>
-                                <li>Executive message videos</li>
-                                <li>Event highlight reels</li>
-                                <li>Testimonial and case study videos</li>
-                            </ul>
-                            
-                            <h4>Why Choose Us?</h4>
-                            <ul>
-                                <li>10+ years corporate video experience</li>
-                                <li>Understanding of corporate branding</li>
-                                <li>Professional voiceover integration</li>
-                                <li>Subtitles and closed captions</li>
-                                <li>Quick turnaround times</li>
-                                <li>Confidentiality guaranteed</li>
+                                <li>Cartoonish and playful</li>
+                                <li>Realistic and detailed</li>
+                                <li>Geometric and modern</li>
+                                <li>Vintage and retro</li>
+                                <li>Hand-drawn aesthetic</li>
+                                <li>3D rendered characters</li>
                             </ul>
                         </div>
                     `
                 },
-                social: {
-                    title: "Social Media Video Editing",
+                typography: {
+                    title: "Typography Logo Design",
                     content: `
                         <div class="service-details">
-                            <h3>Viral-Worthy Social Content</h3>
-                            <p>We edit videos specifically optimized for social media platforms to maximize engagement and sharing.</p>
+                            <h3>Custom Lettering & Wordmarks</h3>
+                            <p>We craft unique typographic logos that make your name the star of your brand identity.</p>
                             
-                            <h4>Platform Specialization:</h4>
+                            <h4>Typography Styles:</h4>
                             <ul>
-                                <li>Instagram Reels & Stories</li>
-                                <li>TikTok trends and effects</li>
-                                <li>YouTube Shorts</li>
-                                <li>Facebook/Instagram ads</li>
-                                <li>LinkedIn professional videos</li>
-                                <li>Twitter video clips</li>
+                                <li>Hand-lettered scripts</li>
+                                <li>Custom sans-serif fonts</li>
+                                <li>Serif sophistication</li>
+                                <li>Geometric typefaces</li>
+                                <li>Vintage-inspired lettering</li>
+                                <li>Modern calligraphy</li>
                             </ul>
                             
-                            <h4>Our Approach:</h4>
+                            <h4>Special Techniques:</h4>
                             <ul>
-                                <li>First 3-second hook to stop scrolling</li>
-                                <li>Vertical and square formats</li>
-                                <li>Captions for sound-off viewing</li>
-                                <li>Trending music and effects</li>
-                                <li>Hashtag strategy included</li>
-                                <li>Analytics-driven optimizations</li>
+                                <li>Letterform customization</li>
+                                <li>Creative ligatures</li>
+                                <li>Negative space integration</li>
+                                <li>Letter stacking options</li>
+                                <li>Monogram development</li>
+                                <li>Responsive typography systems</li>
                             </ul>
                         </div>
                     `
                 },
-                music: {
-                    title: "Music Video Editing",
+                "3d": {
+                    title: "3D Logo Design",
                     content: `
                         <div class="service-details">
-                            <h3>Cinematic Music Videos</h3>
-                            <p>We create music videos that visually amplify your audio and create memorable experiences.</p>
+                            <h3>Dimensional 3D Logos</h3>
+                            <p>We create logos with depth and realism for a modern, high-tech appearance.</p>
                             
-                            <h4>Editing Techniques:</h4>
+                            <h4>3D Techniques:</h4>
                             <ul>
-                                <li>Beat-synced editing</li>
-                                <li>Lyric visualization</li>
-                                <li>Conceptual storytelling</li>
-                                <li>Performance enhancement</li>
-                                <li>Special effects integration</li>
-                                <li>Color grading for mood</li>
+                                <li>Extruded typography</li>
+                                <li>Isometric designs</li>
+                                <li>Realistic materials/textures</li>
+                                <li>Lighting and shadows</li>
+                                <li>Perspective effects</li>
+                                <li>Animated versions available</li>
                             </ul>
                             
-                            <h4>Genres We Work With:</h4>
+                            <h4>Applications:</h4>
                             <ul>
-                                <li>Pop/Rock</li>
-                                <li>Hip-Hop/Rap</li>
-                                <li>Electronic/Dance</li>
-                                <li>R&B/Soul</li>
-                                <li>Country</li>
-                                <li>Alternative/Indie</li>
+                                <li>Gaming companies</li>
+                                <li>Tech startups</li>
+                                <li>Architecture firms</li>
+                                <li>Product packaging</li>
+                                <li>Event branding</li>
+                                <li>Digital platforms</li>
                             </ul>
                         </div>
                     `
                 },
-                wedding: {
-                    title: "Wedding Video Editing",
+                redesign: {
+                    title: "Logo Redesign Service",
                     content: `
                         <div class="service-details">
-                            <h3>Cinematic Wedding Films</h3>
-                            <p>We transform your wedding footage into a beautiful, emotional film you'll treasure forever.</p>
+                            <h3>Logo Modernization</h3>
+                            <p>We refresh outdated logos while maintaining brand recognition and equity.</p>
                             
-                            <h4>Our Wedding Packages Include:</h4>
-                            <ul>
-                                <li>Highlight film (3-5 minutes)</li>
-                                <li>Full ceremony edit</li>
-                                <li>Reception highlights</li>
-                                <li>Same-day edit option</li>
-                                <li>Drone footage integration</li>
-                                <li>Customized soundtrack</li>
-                            </ul>
-                            
-                            <h4>Special Touches:</h4>
-                            <ul>
-                                <li>Slow motion effects</li>
-                                <li>Black & white sequences</li>
-                                <li>Vintage film looks</li>
-                                <li>Audio sweetening</li>
-                                <li>Guest message compilation</li>
-                                <li>Custom DVD/Blu-ray packaging</li>
-                            </ul>
-                        </div>
-                    `
-                },
-                animation: {
-                    title: "2D/3D Animation",
-                    content: `
-                        <div class="service-details">
-                            <h3>Custom Animated Videos</h3>
-                            <p>We create engaging animated videos that explain complex ideas simply and memorably.</p>
-                            
-                            <h4>Animation Styles:</h4>
-                            <ul>
-                                <li>2D Character Animation</li>
-                                <li>3D Product Visualization</li>
-                                <li>Whiteboard Animation</li>
-                                <li>Motion Graphics</li>
-                                <li>Infographic Animation</li>
-                                <li>Mixed Media Animation</li>
-                            </ul>
-                            
-                            <h4>Our Animation Process:</h4>
+                            <h4>Redesign Process:</h4>
                             <ol>
-                                <li>Concept development</li>
-                                <li>Scriptwriting</li>
-                                <li>Storyboarding</li>
-                                <li>Voiceover recording</li>
-                                <li>Animation production</li>
-                                <li>Sound design and delivery</li>
+                                <li>Current logo audit</li>
+                                <li>Competitive analysis</li>
+                                <li>Brand positioning review</li>
+                                <li>Modernization concepts</li>
+                                <li>Gradual evolution options</li>
+                                <li>Complete redesign options</li>
                             </ol>
+                            
+                            <h4>Redesign Benefits:</h4>
+                            <ul>
+                                <li>Maintain brand recognition</li>
+                                <li>Appeal to new audiences</li>
+                                <li>Improve versatility</li>
+                                <li>Enhance professionalism</li>
+                                <li>Optimize for digital use</li>
+                                <li>Future-proof your brand</li>
+                            </ul>
                         </div>
                     `
                 }
@@ -997,7 +1131,7 @@
             });
 
             // Animate elements when they come into view
-            const animateElements = document.querySelectorAll('.service-card, .section-title');
+            const animateElements = document.querySelectorAll('.service-card, .section-title, .portfolio-item, .process-step');
             
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {

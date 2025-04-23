@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solidale Infotech - Premium Video Editing Services</title>
+    <title>Solidale Infotech - High-Converting Thumbnail Design Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Black Theme Styles */
@@ -322,6 +322,70 @@
             transform: translateX(4px);
         }
 
+        /* Portfolio Section */
+        .portfolio {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .portfolio-item {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 0, 255, 0.3);
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .portfolio-category {
+            font-size: 0.9rem;
+            color: var(--accent);
+        }
+
         /* Modal Styles */
         .modal-overlay {
             position: fixed;
@@ -455,27 +519,6 @@
             top: -2px;
         }
 
-        /* Video Demo Section */
-        .video-demo {
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .video-container {
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(255, 0, 255, 0.2);
-            border: 1px solid rgba(255, 0, 255, 0.2);
-        }
-
-        .video-container iframe {
-            width: 100%;
-            height: 450px;
-            border: none;
-        }
-
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -514,8 +557,8 @@
                 padding: 2rem 1.5rem;
             }
             
-            .video-container iframe {
-                height: 350px;
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             }
         }
 
@@ -532,8 +575,8 @@
                 padding: 1.5rem;
             }
             
-            .video-container iframe {
-                height: 250px;
+            .portfolio-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -552,7 +595,7 @@
                 <nav>
                     <ul>
                         <li><a href="home.html">Home</a></li>
-                        <li><a href="#" class="active">Video Editing</a></li>
+                        <li><a href="#" class="active">Thumbnail Design</a></li>
                        
                     </ul>
                 </nav>
@@ -564,17 +607,17 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Professional Video Editing Services</h1>
-                <p class="hero-subtitle">Transform your raw footage into stunning visual stories with our award-winning video editing team</p>
-                <p class="hero-subtitle">With over 10 years of experience in the industry, we create compelling videos that captivate audiences and deliver your message powerfully.</p>
+                <h1 class="hero-title">High-Converting Thumbnail Design</h1>
+                <p class="hero-subtitle">Professional thumbnail designs that increase your click-through rates and grow your audience</p>
+                <p class="hero-subtitle">With data-driven design strategies, we create thumbnails that stand out in crowded feeds and drive more views.</p>
                 
                 <div class="features">
                     <ul>
-                        <li>Hollywood-style editing techniques</li>
-                        <li>4K/8K resolution support</li>
-                        <li>Motion graphics & visual effects</li>
-                        <li>Color grading & correction</li>
-                        <li>Fast turnaround times</li>
+                        <li>Psychology-driven designs</li>
+                        <li>Platform-specific optimization</li>
+                        <li>Custom illustrations</li>
+                        <li>Eye-catching typography</li>
+                        <li>Fast 24-hour turnaround</li>
                         <li>Unlimited revisions</li>
                     </ul>
                 </div>
@@ -585,65 +628,106 @@
     <!-- Services Section -->
     <section class="services">
         <div class="container">
-            <h2 class="section-title">Our Video Editing Services</h2>
+            <h2 class="section-title">Our Thumbnail Services</h2>
             <div class="services-grid">
-                <!-- Commercial Videos -->
+                <!-- YouTube Thumbnails -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2991/2991483.png" alt="Commercial Videos" class="card-img">
-                    <h3>Commercial Videos</h3>
-                    <p>High-impact video ads that boost conversions and brand awareness. Perfect for TV, social media, and digital campaigns.</p>
-                    <button class="learn-more-btn" data-service="commercial">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="YouTube Thumbnails" class="card-img">
+                    <h3>YouTube Thumbnails</h3>
+                    <p>High-click-rate thumbnails designed to stand out in YouTube's competitive landscape with bold text and compelling imagery.</p>
+                    <button class="learn-more-btn" data-service="youtube">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Corporate Videos -->
+                <!-- TikTok Thumbnails -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3176/3176272.png" alt="Corporate Videos" class="card-img">
-                    <h3>Corporate Videos</h3>
-                    <p>Professional videos for businesses including explainers, training videos, product demos, and company profiles.</p>
-                    <button class="learn-more-btn" data-service="corporate">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok Thumbnails" class="card-img">
+                    <h3>TikTok Thumbnails</h3>
+                    <p>Eye-catching cover images for your TikTok videos that increase profile visits and video completion rates.</p>
+                    <button class="learn-more-btn" data-service="tiktok">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Social Media Videos -->
+                <!-- Instagram Thumbnails -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3669/3669987.png" alt="Social Media Videos" class="card-img">
-                    <h3>Social Media Videos</h3>
-                    <p>Engaging short-form content optimized for Instagram, TikTok, YouTube Shorts, and other platforms.</p>
-                    <button class="learn-more-btn" data-service="social">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Thumbnails" class="card-img">
+                    <h3>Instagram Thumbnails</h3>
+                    <p>Cohesive and branded thumbnails for IGTV, Reels, and feed posts that maintain your aesthetic while driving engagement.</p>
+                    <button class="learn-more-btn" data-service="instagram">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Music Videos -->
+                <!-- Podcast Thumbnails -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3659/3659898.png" alt="Music Videos" class="card-img">
-                    <h3>Music Videos</h3>
-                    <p>Creative music video production with visual storytelling that complements your audio perfectly.</p>
-                    <button class="learn-more-btn" data-service="music">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2693/2693491.png" alt="Podcast Thumbnails" class="card-img">
+                    <h3>Podcast Thumbnails</h3>
+                    <p>Professional episode artwork that communicates your content at a glance across podcast platforms.</p>
+                    <button class="learn-more-btn" data-service="podcast">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Wedding Videos -->
+                <!-- Course Thumbnails -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3227/3227011.png" alt="Wedding Videos" class="card-img">
-                    <h3>Wedding Videos</h3>
-                    <p>Beautiful cinematic wedding films that capture your special day with emotion and artistry.</p>
-                    <button class="learn-more-btn" data-service="wedding">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2936/2936886.png" alt="Course Thumbnails" class="card-img">
+                    <h3>Course Thumbnails</h3>
+                    <p>High-converting thumbnails for online courses that communicate value and increase enrollment rates.</p>
+                    <button class="learn-more-btn" data-service="course">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Animation -->
+                <!-- Custom Illustrations -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2779/2779775.png" alt="Animation" class="card-img">
-                    <h3>2D/3D Animation</h3>
-                    <p>Custom animated videos including explainers, whiteboard animations, and 3D product visualizations.</p>
-                    <button class="learn-more-btn" data-service="animation">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2779/2779775.png" alt="Custom Illustrations" class="card-img">
+                    <h3>Custom Illustrations</h3>
+                    <p>Unique illustrated thumbnails that establish your brand identity and make your content instantly recognizable.</p>
+                    <button class="learn-more-btn" data-service="illustrations">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Video Demo Section -->
-    <section class="video-demo">
+    <!-- Portfolio Section -->
+    <section class="portfolio">
         <div class="container">
-            <h2 class="section-title">Our Work Samples</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Editing Sample" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h2 class="section-title">Our Thumbnail Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200/ff00ff/ffffff?text=YouTube+Gaming" alt="YouTube Gaming Thumbnail" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Gaming Thumbnail</h3>
+                        <span class="portfolio-category">YouTube</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200/ff69b4/ffffff?text=TikTok+Fitness" alt="TikTok Fitness Thumbnail" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Fitness Thumbnail</h3>
+                        <span class="portfolio-category">TikTok</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200/9c27b0/ffffff?text=Podcast+Cover" alt="Podcast Cover" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Podcast Episode</h3>
+                        <span class="portfolio-category">Spotify/Apple</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200/e91e63/ffffff?text=Instagram+Reel" alt="Instagram Reel Thumbnail" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Beauty Reel</h3>
+                        <span class="portfolio-category">Instagram</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200/2196f3/ffffff?text=Online+Course" alt="Online Course Thumbnail" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Course Thumbnail</h3>
+                        <span class="portfolio-category">Udemy</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200/4caf50/ffffff?text=Illustrated+Thumbnail" alt="Illustrated Thumbnail" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Custom Illustration</h3>
+                        <span class="portfolio-category">Branded Content</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -776,177 +860,177 @@
 
             // Service content data
             const servicesData = {
-                commercial: {
-                    title: "Commercial Video Editing",
+                youtube: {
+                    title: "YouTube Thumbnail Design",
                     content: `
                         <div class="service-details">
-                            <h3>High-Impact Commercial Videos</h3>
-                            <p>Our commercial video editing service transforms your raw footage into compelling ads that drive conversions and brand recognition.</p>
+                            <h3>High-Click YouTube Thumbnails</h3>
+                            <p>We design thumbnails that stand out in YouTube's competitive landscape and significantly increase your click-through rates.</p>
                             
                             <h4>Key Features:</h4>
                             <ul>
-                                <li>Precise pacing for maximum impact</li>
-                                <li>Dynamic transitions and effects</li>
-                                <li>Professional color grading</li>
-                                <li>Sound design and audio mixing</li>
-                                <li>Optimized for all platforms (TV, social, web)</li>
-                                <li>Multiple versions for A/B testing</li>
+                                <li>Bold, attention-grabbing text</li>
+                                <li>High-contrast color schemes</li>
+                                <li>Emotionally compelling facial expressions</li>
+                                <li>Strategic use of arrows and circles</li>
+                                <li>Brand consistency across your channel</li>
+                                <li>Mobile-optimized designs</li>
                             </ul>
                             
                             <h4>Our Process:</h4>
                             <ol>
-                                <li>Initial consultation to understand campaign goals</li>
-                                <li>Storyboard and concept development</li>
-                                <li>Footage review and selection</li>
-                                <li>Rough cut for approval</li>
-                                <li>Final editing with effects and audio</li>
-                                <li>Delivery in all required formats</li>
+                                <li>Analyze your niche and competitors</li>
+                                <li>Develop thumbnail concepts based on video content</li>
+                                <li>Create 3 initial design options</li>
+                                <li>Refine based on your feedback</li>
+                                <li>Deliver final files in multiple formats</li>
+                                <li>Provide A/B testing recommendations</li>
                             </ol>
                         </div>
                     `
                 },
-                corporate: {
-                    title: "Corporate Video Editing",
+                tiktok: {
+                    title: "TikTok Thumbnail Design",
                     content: `
                         <div class="service-details">
-                            <h3>Professional Corporate Videos</h3>
-                            <p>We create polished corporate videos that effectively communicate your message and enhance your brand image.</p>
+                            <h3>Engaging TikTok Covers</h3>
+                            <p>We create thumbnails that make viewers stop scrolling and watch your TikTok videos to completion.</p>
+                            
+                            <h4>Special Features:</h4>
+                            <ul>
+                                <li>Vertical format optimization</li>
+                                <li>First-frame impact for auto-play</li>
+                                <li>Trend-appropriate styling</li>
+                                <li>High-energy visual elements</li>
+                                <li>Branded templates for consistency</li>
+                                <li>Text placement that avoids UI elements</li>
+                            </ul>
+                            
+                            <h4>Why Our TikTok Thumbnails Work:</h4>
+                            <ul>
+                                <li>Designed for sound-off viewing</li>
+                                <li>Quick-read messaging</li>
+                                <li>Emotionally provocative imagery</li>
+                                <li>Platform-specific best practices</li>
+                                <li>Tested color psychology</li>
+                                <li>Optimized for FYP algorithm</li>
+                            </ul>
+                        </div>
+                    `
+                },
+                instagram: {
+                    title: "Instagram Thumbnail Design",
+                    content: `
+                        <div class="service-details">
+                            <h3>Scroll-Stopping Instagram Thumbnails</h3>
+                            <p>We design cohesive thumbnails that maintain your aesthetic while driving higher engagement rates.</p>
                             
                             <h4>Services Include:</h4>
                             <ul>
-                                <li>Company profile videos</li>
-                                <li>Training and instructional videos</li>
-                                <li>Product demonstration videos</li>
-                                <li>Executive message videos</li>
-                                <li>Event highlight reels</li>
-                                <li>Testimonial and case study videos</li>
+                                <li>IGTV episode covers</li>
+                                <li>Reels thumbnails</li>
+                                <li>Carousel post covers</li>
+                                <li>Story highlight icons</li>
+                                <li>Branded templates</li>
+                                <li>Feed layout mockups</li>
                             </ul>
                             
-                            <h4>Why Choose Us?</h4>
+                            <h4>Our Instagram Approach:</h4>
                             <ul>
-                                <li>10+ years corporate video experience</li>
-                                <li>Understanding of corporate branding</li>
-                                <li>Professional voiceover integration</li>
-                                <li>Subtitles and closed captions</li>
-                                <li>Quick turnaround times</li>
-                                <li>Confidentiality guaranteed</li>
+                                <li>Cohesive color palette</li>
+                                <li>Consistent typography</li>
+                                <li>Grid layout planning</li>
+                                <li>Hashtag integration</li>
+                                <li>CTA optimization</li>
+                                <li>Profile aesthetic analysis</li>
                             </ul>
                         </div>
                     `
                 },
-                social: {
-                    title: "Social Media Video Editing",
+                podcast: {
+                    title: "Podcast Thumbnail Design",
                     content: `
                         <div class="service-details">
-                            <h3>Viral-Worthy Social Content</h3>
-                            <p>We edit videos specifically optimized for social media platforms to maximize engagement and sharing.</p>
+                            <h3>Professional Podcast Artwork</h3>
+                            <p>We create episode-specific thumbnails that communicate your content at a glance across all platforms.</p>
+                            
+                            <h4>Design Elements:</h4>
+                            <ul>
+                                <li>Legible text at small sizes</li>
+                                <li>Guest photo integration</li>
+                                <li>Episode number visibility</li>
+                                <li>Brand consistency</li>
+                                <li>Platform-specific variations</li>
+                                <li>Seasonal themes</li>
+                            </ul>
+                            
+                            <h4>Platform Optimization:</h4>
+                            <ul>
+                                <li>Spotify square format</li>
+                                <li>Apple Podcasts requirements</li>
+                                <li>YouTube podcast versions</li>
+                                <li>Social media shareables</li>
+                                <li>Website player compatibility</li>
+                                <li>Mobile app display testing</li>
+                            </ul>
+                        </div>
+                    `
+                },
+                course: {
+                    title: "Online Course Thumbnail Design",
+                    content: `
+                        <div class="service-details">
+                            <h3>High-Converting Course Thumbnails</h3>
+                            <p>We design thumbnails that communicate value and increase enrollment rates for your online courses.</p>
+                            
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Clear value proposition</li>
+                                <li>Professional yet approachable</li>
+                                <li>Trust-building elements</li>
+                                <li>Platform-specific optimization</li>
+                                <li>Series consistency</li>
+                                <li>Benefit-focused messaging</li>
+                            </ul>
                             
                             <h4>Platform Specialization:</h4>
                             <ul>
-                                <li>Instagram Reels & Stories</li>
-                                <li>TikTok trends and effects</li>
-                                <li>YouTube Shorts</li>
-                                <li>Facebook/Instagram ads</li>
-                                <li>LinkedIn professional videos</li>
-                                <li>Twitter video clips</li>
-                            </ul>
-                            
-                            <h4>Our Approach:</h4>
-                            <ul>
-                                <li>First 3-second hook to stop scrolling</li>
-                                <li>Vertical and square formats</li>
-                                <li>Captions for sound-off viewing</li>
-                                <li>Trending music and effects</li>
-                                <li>Hashtag strategy included</li>
-                                <li>Analytics-driven optimizations</li>
+                                <li>Udemy course images</li>
+                                <li>Teachable lesson thumbnails</li>
+                                <li>Kajabi product covers</li>
+                                <li>Thinkific course artwork</li>
+                                <li>Membership site graphics</li>
+                                <li>Sales page headers</li>
                             </ul>
                         </div>
                     `
                 },
-                music: {
-                    title: "Music Video Editing",
+                illustrations: {
+                    title: "Custom Illustrated Thumbnails",
                     content: `
                         <div class="service-details">
-                            <h3>Cinematic Music Videos</h3>
-                            <p>We create music videos that visually amplify your audio and create memorable experiences.</p>
+                            <h3>Unique Illustrated Thumbnails</h3>
+                            <p>We create custom illustrated thumbnails that establish your brand identity and make your content instantly recognizable.</p>
                             
-                            <h4>Editing Techniques:</h4>
+                            <h4>Illustration Styles:</h4>
                             <ul>
-                                <li>Beat-synced editing</li>
-                                <li>Lyric visualization</li>
-                                <li>Conceptual storytelling</li>
-                                <li>Performance enhancement</li>
-                                <li>Special effects integration</li>
-                                <li>Color grading for mood</li>
+                                <li>Cartoon character designs</li>
+                                <li>Minimalist vector art</li>
+                                <li>Hand-drawn aesthetics</li>
+                                <li>Isometric designs</li>
+                                <li>3D rendered elements</li>
+                                <li>Mixed media compositions</li>
                             </ul>
                             
-                            <h4>Genres We Work With:</h4>
+                            <h4>Benefits of Illustrated Thumbnails:</h4>
                             <ul>
-                                <li>Pop/Rock</li>
-                                <li>Hip-Hop/Rap</li>
-                                <li>Electronic/Dance</li>
-                                <li>R&B/Soul</li>
-                                <li>Country</li>
-                                <li>Alternative/Indie</li>
+                                <li>Stand out from photo-based competitors</li>
+                                <li>Establish unique brand identity</li>
+                                <li>Consistent character representation</li>
+                                <li>Flexible for various content types</li>
+                                <li>Easily adaptable templates</li>
+                                <li>Timeless appeal beyond trends</li>
                             </ul>
-                        </div>
-                    `
-                },
-                wedding: {
-                    title: "Wedding Video Editing",
-                    content: `
-                        <div class="service-details">
-                            <h3>Cinematic Wedding Films</h3>
-                            <p>We transform your wedding footage into a beautiful, emotional film you'll treasure forever.</p>
-                            
-                            <h4>Our Wedding Packages Include:</h4>
-                            <ul>
-                                <li>Highlight film (3-5 minutes)</li>
-                                <li>Full ceremony edit</li>
-                                <li>Reception highlights</li>
-                                <li>Same-day edit option</li>
-                                <li>Drone footage integration</li>
-                                <li>Customized soundtrack</li>
-                            </ul>
-                            
-                            <h4>Special Touches:</h4>
-                            <ul>
-                                <li>Slow motion effects</li>
-                                <li>Black & white sequences</li>
-                                <li>Vintage film looks</li>
-                                <li>Audio sweetening</li>
-                                <li>Guest message compilation</li>
-                                <li>Custom DVD/Blu-ray packaging</li>
-                            </ul>
-                        </div>
-                    `
-                },
-                animation: {
-                    title: "2D/3D Animation",
-                    content: `
-                        <div class="service-details">
-                            <h3>Custom Animated Videos</h3>
-                            <p>We create engaging animated videos that explain complex ideas simply and memorably.</p>
-                            
-                            <h4>Animation Styles:</h4>
-                            <ul>
-                                <li>2D Character Animation</li>
-                                <li>3D Product Visualization</li>
-                                <li>Whiteboard Animation</li>
-                                <li>Motion Graphics</li>
-                                <li>Infographic Animation</li>
-                                <li>Mixed Media Animation</li>
-                            </ul>
-                            
-                            <h4>Our Animation Process:</h4>
-                            <ol>
-                                <li>Concept development</li>
-                                <li>Scriptwriting</li>
-                                <li>Storyboarding</li>
-                                <li>Voiceover recording</li>
-                                <li>Animation production</li>
-                                <li>Sound design and delivery</li>
-                            </ol>
                         </div>
                     `
                 }
@@ -997,7 +1081,7 @@
             });
 
             // Animate elements when they come into view
-            const animateElements = document.querySelectorAll('.service-card, .section-title');
+            const animateElements = document.querySelectorAll('.service-card, .section-title, .portfolio-item');
             
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {

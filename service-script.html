@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solidale Infotech - Premium Video Editing Services</title>
+    <title>Solidale Infotech - Professional Script Writing Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Black Theme Styles */
@@ -455,25 +455,37 @@
             top: -2px;
         }
 
-        /* Video Demo Section */
-        .video-demo {
+        /* Portfolio Section */
+        .portfolio {
             padding: 4rem 0;
             text-align: center;
         }
 
-        .video-container {
+        .portfolio-container {
             max-width: 800px;
             margin: 0 auto;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 20px 50px rgba(255, 0, 255, 0.2);
             border: 1px solid rgba(255, 0, 255, 0.2);
+            padding: 2rem;
+            background: rgba(17, 17, 17, 0.8);
         }
 
-        .video-container iframe {
-            width: 100%;
-            height: 450px;
-            border: none;
+        .portfolio-item {
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .portfolio-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .portfolio-item p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
         }
 
         /* Animations */
@@ -514,8 +526,8 @@
                 padding: 2rem 1.5rem;
             }
             
-            .video-container iframe {
-                height: 350px;
+            .portfolio-container {
+                padding: 1.5rem;
             }
         }
 
@@ -530,10 +542,6 @@
             
             .service-card {
                 padding: 1.5rem;
-            }
-            
-            .video-container iframe {
-                height: 250px;
             }
         }
     </style>
@@ -552,7 +560,7 @@
                 <nav>
                     <ul>
                         <li><a href="home.html">Home</a></li>
-                        <li><a href="#" class="active">Video Editing</a></li>
+                        <li><a href="#" class="active">Script Writing</a></li>
                        
                     </ul>
                 </nav>
@@ -564,16 +572,16 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Professional Video Editing Services</h1>
-                <p class="hero-subtitle">Transform your raw footage into stunning visual stories with our award-winning video editing team</p>
-                <p class="hero-subtitle">With over 10 years of experience in the industry, we create compelling videos that captivate audiences and deliver your message powerfully.</p>
+                <h1 class="hero-title">Professional Script Writing Services</h1>
+                <p class="hero-subtitle">Transform your ideas into compelling narratives with our award-winning script writing team</p>
+                <p class="hero-subtitle">With over 10 years of experience in the industry, we craft powerful scripts that captivate audiences and deliver your message effectively.</p>
                 
                 <div class="features">
                     <ul>
-                        <li>Hollywood-style editing techniques</li>
-                        <li>4K/8K resolution support</li>
-                        <li>Motion graphics & visual effects</li>
-                        <li>Color grading & correction</li>
+                        <li>Hollywood-style storytelling techniques</li>
+                        <li>Multiple genre expertise</li>
+                        <li>Character development & dialogue</li>
+                        <li>Industry-standard formatting</li>
                         <li>Fast turnaround times</li>
                         <li>Unlimited revisions</li>
                     </ul>
@@ -585,65 +593,76 @@
     <!-- Services Section -->
     <section class="services">
         <div class="container">
-            <h2 class="section-title">Our Video Editing Services</h2>
+            <h2 class="section-title">Our Script Writing Services</h2>
             <div class="services-grid">
-                <!-- Commercial Videos -->
+                <!-- Screenplays -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2991/2991483.png" alt="Commercial Videos" class="card-img">
-                    <h3>Commercial Videos</h3>
-                    <p>High-impact video ads that boost conversions and brand awareness. Perfect for TV, social media, and digital campaigns.</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3659/3659899.png" alt="Screenplays" class="card-img">
+                    <h3>Screenplays</h3>
+                    <p>Feature-length scripts for films with proper industry formatting, character arcs, and compelling narratives.</p>
+                    <button class="learn-more-btn" data-service="screenplays">Learn More <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <!-- TV Scripts -->
+                <div class="service-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2936/2936886.png" alt="TV Scripts" class="card-img">
+                    <h3>TV Scripts</h3>
+                    <p>Episodic scripts for television including pilots, series bibles, and showrunner services.</p>
+                    <button class="learn-more-btn" data-service="tv">Learn More <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Commercial Scripts -->
+                <div class="service-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2991/2991483.png" alt="Commercial Scripts" class="card-img">
+                    <h3>Commercial Scripts</h3>
+                    <p>Short, impactful scripts for TV, radio, and digital ads designed to maximize engagement.</p>
                     <button class="learn-more-btn" data-service="commercial">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Corporate Videos -->
+                <!-- Corporate Scripts -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3176/3176272.png" alt="Corporate Videos" class="card-img">
-                    <h3>Corporate Videos</h3>
-                    <p>Professional videos for businesses including explainers, training videos, product demos, and company profiles.</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3176/3176272.png" alt="Corporate Scripts" class="card-img">
+                    <h3>Corporate Scripts</h3>
+                    <p>Professional scripts for training videos, explainers, product demos, and company presentations.</p>
                     <button class="learn-more-btn" data-service="corporate">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Social Media Videos -->
+                <!-- Web Series -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3669/3669987.png" alt="Social Media Videos" class="card-img">
-                    <h3>Social Media Videos</h3>
-                    <p>Engaging short-form content optimized for Instagram, TikTok, YouTube Shorts, and other platforms.</p>
-                    <button class="learn-more-btn" data-service="social">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3669/3669987.png" alt="Web Series" class="card-img">
+                    <h3>Web Series</h3>
+                    <p>Scripts optimized for digital platforms with episodic structure and binge-worthy content.</p>
+                    <button class="learn-more-btn" data-service="web">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Music Videos -->
+                <!-- Video Game Scripts -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3659/3659898.png" alt="Music Videos" class="card-img">
-                    <h3>Music Videos</h3>
-                    <p>Creative music video production with visual storytelling that complements your audio perfectly.</p>
-                    <button class="learn-more-btn" data-service="music">Learn More <i class="fas fa-arrow-right"></i></button>
-                </div>
-
-                <!-- Wedding Videos -->
-                <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3227/3227011.png" alt="Wedding Videos" class="card-img">
-                    <h3>Wedding Videos</h3>
-                    <p>Beautiful cinematic wedding films that capture your special day with emotion and artistry.</p>
-                    <button class="learn-more-btn" data-service="wedding">Learn More <i class="fas fa-arrow-right"></i></button>
-                </div>
-
-                <!-- Animation -->
-                <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2779/2779775.png" alt="Animation" class="card-img">
-                    <h3>2D/3D Animation</h3>
-                    <p>Custom animated videos including explainers, whiteboard animations, and 3D product visualizations.</p>
-                    <button class="learn-more-btn" data-service="animation">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3612/3612569.png" alt="Video Game Scripts" class="card-img">
+                    <h3>Video Game Scripts</h3>
+                    <p>Interactive narratives, dialogue trees, and world-building for immersive gaming experiences.</p>
+                    <button class="learn-more-btn" data-service="games">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Video Demo Section -->
-    <section class="video-demo">
+    <!-- Portfolio Section -->
+    <section class="portfolio">
         <div class="container">
-            <h2 class="section-title">Our Work Samples</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Editing Sample" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h2 class="section-title">Our Writing Samples</h2>
+            <div class="portfolio-container">
+                <div class="portfolio-item">
+                    <h3>Feature Film: "Midnight Run"</h3>
+                    <p>Action-comedy screenplay about a bounty hunter and his quirky target on a cross-country chase.</p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>TV Pilot: "City Lights"</h3>
+                    <p>Drama series following the interconnected lives of New Yorkers in a high-rise apartment building.</p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>Commercial: "NexTech Smartphones"</h3>
+                    <p>30-second spot highlighting the revolutionary camera technology in the new smartphone line.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -776,177 +795,177 @@
 
             // Service content data
             const servicesData = {
-                commercial: {
-                    title: "Commercial Video Editing",
+                screenplays: {
+                    title: "Feature Film Screenplays",
                     content: `
                         <div class="service-details">
-                            <h3>High-Impact Commercial Videos</h3>
-                            <p>Our commercial video editing service transforms your raw footage into compelling ads that drive conversions and brand recognition.</p>
+                            <h3>Compelling Feature-Length Scripts</h3>
+                            <p>We craft professionally formatted screenplays that tell compelling stories with strong character arcs and cinematic potential.</p>
                             
                             <h4>Key Features:</h4>
                             <ul>
-                                <li>Precise pacing for maximum impact</li>
-                                <li>Dynamic transitions and effects</li>
-                                <li>Professional color grading</li>
-                                <li>Sound design and audio mixing</li>
-                                <li>Optimized for all platforms (TV, social, web)</li>
-                                <li>Multiple versions for A/B testing</li>
+                                <li>90-120 page industry-standard scripts</li>
+                                <li>Three-act structure development</li>
+                                <li>Character bios and arcs</li>
+                                <li>Dialogue polishing</li>
+                                <li>Scene-by-scene breakdowns</li>
+                                <li>Multiple revisions</li>
                             </ul>
                             
                             <h4>Our Process:</h4>
                             <ol>
-                                <li>Initial consultation to understand campaign goals</li>
-                                <li>Storyboard and concept development</li>
-                                <li>Footage review and selection</li>
-                                <li>Rough cut for approval</li>
-                                <li>Final editing with effects and audio</li>
-                                <li>Delivery in all required formats</li>
+                                <li>Initial consultation to understand your vision</li>
+                                <li>Concept development and treatment</li>
+                                <li>Outline and beat sheet creation</li>
+                                <li>First draft delivery</li>
+                                <li>Revision rounds based on feedback</li>
+                                <li>Final polish and formatting</li>
                             </ol>
                         </div>
                     `
                 },
-                corporate: {
-                    title: "Corporate Video Editing",
+                tv: {
+                    title: "Television Scripts",
                     content: `
                         <div class="service-details">
-                            <h3>Professional Corporate Videos</h3>
-                            <p>We create polished corporate videos that effectively communicate your message and enhance your brand image.</p>
+                            <h3>Episodic Television Writing</h3>
+                            <p>We create binge-worthy TV scripts with compelling season arcs and memorable characters.</p>
                             
                             <h4>Services Include:</h4>
                             <ul>
+                                <li>TV pilot scripts (30-60 pages)</li>
+                                <li>Series bible development</li>
+                                <li>Episode outlines</li>
+                                <li>Showrunner services</li>
+                                <li>Writer's room participation</li>
+                                <li>Pitch deck creation</li>
+                            </ul>
+                            
+                            <h4>Genres We Specialize In:</h4>
+                            <ul>
+                                <li>Drama</li>
+                                <li>Comedy</li>
+                                <li>Sci-Fi/Fantasy</li>
+                                <li>Crime/Procedural</li>
+                                <li>Animation</li>
+                                <li>Reality TV formats</li>
+                            </ul>
+                        </div>
+                    `
+                },
+                commercial: {
+                    title: "Commercial Script Writing",
+                    content: `
+                        <div class="service-details">
+                            <h3>High-Impact Ad Scripts</h3>
+                            <p>We write scripts for commercials that grab attention and drive conversions.</p>
+                            
+                            <h4>Formats We Write:</h4>
+                            <ul>
+                                <li>30-second TV spots</li>
+                                <li>15-second digital ads</li>
+                                <li>Radio commercials</li>
+                                <li>Social media video scripts</li>
+                                <li>Infomercials</li>
+                                <li>Branded content</li>
+                            </ul>
+                            
+                            <h4>Our Approach:</h4>
+                            <ul>
+                                <li>Strong hook in first 3 seconds</li>
+                                <li>Clear value proposition</li>
+                                <li>Emotional or humorous appeal</li>
+                                <li>Strong call-to-action</li>
+                                <li>Platform-specific optimization</li>
+                                <li>A/B testing variations</li>
+                            </ul>
+                        </div>
+                    `
+                },
+                corporate: {
+                    title: "Corporate Script Writing",
+                    content: `
+                        <div class="service-details">
+                            <h3>Professional Business Scripts</h3>
+                            <p>We create scripts that effectively communicate your corporate message with clarity and impact.</p>
+                            
+                            <h4>Script Types:</h4>
+                            <ul>
+                                <li>Training and educational videos</li>
+                                <li>Product demonstration scripts</li>
                                 <li>Company profile videos</li>
-                                <li>Training and instructional videos</li>
-                                <li>Product demonstration videos</li>
-                                <li>Executive message videos</li>
-                                <li>Event highlight reels</li>
-                                <li>Testimonial and case study videos</li>
+                                <li>Executive presentations</li>
+                                <li>Investor pitch videos</li>
+                                <li>Internal communications</li>
                             </ul>
                             
                             <h4>Why Choose Us?</h4>
                             <ul>
-                                <li>10+ years corporate video experience</li>
-                                <li>Understanding of corporate branding</li>
-                                <li>Professional voiceover integration</li>
-                                <li>Subtitles and closed captions</li>
+                                <li>Understand corporate tone and branding</li>
+                                <li>Simplify complex information</li>
+                                <li>Professional yet approachable style</li>
+                                <li>SEO-optimized when needed</li>
                                 <li>Quick turnaround times</li>
                                 <li>Confidentiality guaranteed</li>
                             </ul>
                         </div>
                     `
                 },
-                social: {
-                    title: "Social Media Video Editing",
+                web: {
+                    title: "Web Series Scripts",
                     content: `
                         <div class="service-details">
-                            <h3>Viral-Worthy Social Content</h3>
-                            <p>We edit videos specifically optimized for social media platforms to maximize engagement and sharing.</p>
+                            <h3>Digital-First Series Writing</h3>
+                            <p>We craft scripts specifically designed for online platforms with binge-worthy episodic content.</p>
+                            
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Short-form episodic structure (5-15 min episodes)</li>
+                                <li>Strong hooks to keep viewers watching</li>
+                                <li>Optimized for mobile viewing</li>
+                                <li>Interactive storytelling elements</li>
+                                <li>Social media integration</li>
+                                <li>Season arc planning</li>
+                            </ul>
                             
                             <h4>Platform Specialization:</h4>
                             <ul>
-                                <li>Instagram Reels & Stories</li>
-                                <li>TikTok trends and effects</li>
-                                <li>YouTube Shorts</li>
-                                <li>Facebook/Instagram ads</li>
-                                <li>LinkedIn professional videos</li>
-                                <li>Twitter video clips</li>
-                            </ul>
-                            
-                            <h4>Our Approach:</h4>
-                            <ul>
-                                <li>First 3-second hook to stop scrolling</li>
-                                <li>Vertical and square formats</li>
-                                <li>Captions for sound-off viewing</li>
-                                <li>Trending music and effects</li>
-                                <li>Hashtag strategy included</li>
-                                <li>Analytics-driven optimizations</li>
+                                <li>YouTube Originals</li>
+                                <li>Instagram/TikTok series</li>
+                                <li>Facebook Watch</li>
+                                <li>Streaming platform shorts</li>
+                                <li>Branded content series</li>
+                                <li>Crowdfunded projects</li>
                             </ul>
                         </div>
                     `
                 },
-                music: {
-                    title: "Music Video Editing",
+                games: {
+                    title: "Video Game Script Writing",
                     content: `
                         <div class="service-details">
-                            <h3>Cinematic Music Videos</h3>
-                            <p>We create music videos that visually amplify your audio and create memorable experiences.</p>
+                            <h3>Immersive Game Narratives</h3>
+                            <p>We create interactive stories and dialogue that bring video game worlds to life.</p>
                             
-                            <h4>Editing Techniques:</h4>
+                            <h4>Game Writing Services:</h4>
                             <ul>
-                                <li>Beat-synced editing</li>
-                                <li>Lyric visualization</li>
-                                <li>Conceptual storytelling</li>
-                                <li>Performance enhancement</li>
-                                <li>Special effects integration</li>
-                                <li>Color grading for mood</li>
+                                <li>Main storyline development</li>
+                                <li>Branching dialogue trees</li>
+                                <li>Character backstories and arcs</li>
+                                <li>World-building and lore</li>
+                                <li>Quest and mission writing</li>
+                                <li>Cutscene scripting</li>
                             </ul>
                             
-                            <h4>Genres We Work With:</h4>
+                            <h4>Game Genres We Work With:</h4>
                             <ul>
-                                <li>Pop/Rock</li>
-                                <li>Hip-Hop/Rap</li>
-                                <li>Electronic/Dance</li>
-                                <li>R&B/Soul</li>
-                                <li>Country</li>
-                                <li>Alternative/Indie</li>
+                                <li>RPGs</li>
+                                <li>Adventure games</li>
+                                <li>Visual novels</li>
+                                <li>Action games</li>
+                                <li>MMORPGs</li>
+                                <li>Mobile games</li>
                             </ul>
-                        </div>
-                    `
-                },
-                wedding: {
-                    title: "Wedding Video Editing",
-                    content: `
-                        <div class="service-details">
-                            <h3>Cinematic Wedding Films</h3>
-                            <p>We transform your wedding footage into a beautiful, emotional film you'll treasure forever.</p>
-                            
-                            <h4>Our Wedding Packages Include:</h4>
-                            <ul>
-                                <li>Highlight film (3-5 minutes)</li>
-                                <li>Full ceremony edit</li>
-                                <li>Reception highlights</li>
-                                <li>Same-day edit option</li>
-                                <li>Drone footage integration</li>
-                                <li>Customized soundtrack</li>
-                            </ul>
-                            
-                            <h4>Special Touches:</h4>
-                            <ul>
-                                <li>Slow motion effects</li>
-                                <li>Black & white sequences</li>
-                                <li>Vintage film looks</li>
-                                <li>Audio sweetening</li>
-                                <li>Guest message compilation</li>
-                                <li>Custom DVD/Blu-ray packaging</li>
-                            </ul>
-                        </div>
-                    `
-                },
-                animation: {
-                    title: "2D/3D Animation",
-                    content: `
-                        <div class="service-details">
-                            <h3>Custom Animated Videos</h3>
-                            <p>We create engaging animated videos that explain complex ideas simply and memorably.</p>
-                            
-                            <h4>Animation Styles:</h4>
-                            <ul>
-                                <li>2D Character Animation</li>
-                                <li>3D Product Visualization</li>
-                                <li>Whiteboard Animation</li>
-                                <li>Motion Graphics</li>
-                                <li>Infographic Animation</li>
-                                <li>Mixed Media Animation</li>
-                            </ul>
-                            
-                            <h4>Our Animation Process:</h4>
-                            <ol>
-                                <li>Concept development</li>
-                                <li>Scriptwriting</li>
-                                <li>Storyboarding</li>
-                                <li>Voiceover recording</li>
-                                <li>Animation production</li>
-                                <li>Sound design and delivery</li>
-                            </ol>
                         </div>
                     `
                 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solidale Infotech - Premium Web Services</title>
+    <title>Solidale Infotech - Premium Web Development Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Black Theme Styles */
@@ -134,7 +134,7 @@
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 1.5rem;
-            background: linear-gradient(90deg, #ffffff, #e0ffff);
+            background: linear-gradient(90deg, #ffffff, #ccffff);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -266,7 +266,7 @@
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            background: linear-gradient(90deg, #ffffff, #e0ffff);
+            background: linear-gradient(90deg, #ffffff, #ccffff);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -402,7 +402,7 @@
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            background: linear-gradient(90deg, #ffffff, #e0ffff);
+            background: linear-gradient(90deg, #ffffff, #ccffff);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -455,6 +455,68 @@
             top: -2px;
         }
 
+        /* Portfolio Section */
+        .portfolio {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .portfolio-item {
+            background: rgba(17, 17, 17, 0.8);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 255, 255, 0.2);
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .portfolio-info {
+            padding: 1.5rem;
+            text-align: left;
+        }
+
+        .portfolio-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .portfolio-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .portfolio-link:hover {
+            text-decoration: underline;
+        }
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -492,6 +554,10 @@
             .modal-content {
                 padding: 2rem 1.5rem;
             }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
         }
 
         @media (max-width: 480px) {
@@ -506,6 +572,10 @@
             .service-card {
                 padding: 1.5rem;
             }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -517,14 +587,13 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">Solidale Infotech</div>
+                <div class="logo">
+                    <img src="./images/NL-removebg-preview.png" width="75" height="75" alt="">
+                </div>
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#" class="active">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="#" class="active">Web Development</a></li>
                     </ul>
                 </nav>
             </div>
@@ -535,17 +604,18 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Website Designing Services</h1>
-                <p class="hero-subtitle">Get world class website designed by Solidale Infotech Pvt. Ltd.</p>
-                <p class="hero-subtitle">Welcome to India's award winning web designing company - popular for offering creative websites for all kind of businesses, individuals, companies, SMEs, Brands, Institutions, Organisations, Agencies and Govt. Projects.</p>
+                <h1 class="hero-title">Professional Web Development Services</h1>
+                <p class="hero-subtitle">We build stunning, high-performance websites that drive results and elevate your online presence</p>
+                <p class="hero-subtitle">With our expertise in modern web technologies, we create responsive, secure, and scalable web solutions tailored to your business needs.</p>
                 
                 <div class="features">
                     <ul>
-                        <li>Admin panel to update site</li>
-                        <li>SEO friendly features to optimize site</li>
-                        <li>Image, content, slideshow management</li>
-                        <li>Customization capabilities</li>
-                        <li>Google loves it</li>
+                        <li>Custom website development</li>
+                        <li>Mobile-first responsive design</li>
+                        <li>E-commerce solutions</li>
+                        <li>SEO-optimized architecture</li>
+                        <li>Fast loading performance</li>
+                        <li>Ongoing maintenance & support</li>
                     </ul>
                 </div>
             </div>
@@ -557,52 +627,85 @@
         <div class="container">
             <h2 class="section-title">Our Web Development Services</h2>
             <div class="services-grid">
-                <!-- Corporate Website -->
+                <!-- Custom Websites -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1570/1570887.png" alt="Corporate Website" class="card-img">
-                    <h3>Corporate Website</h3>
-                    <p>Lead Generation Corporate Website Designing With over 7 years of excellence in Corporate or Business...</p>
-                    <button class="learn-more-btn" data-service="corporate">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3242/3242257.png" alt="Custom Websites" class="card-img">
+                    <h3>Custom Websites</h3>
+                    <p>Bespoke website development tailored to your brand identity and business objectives with pixel-perfect design.</p>
+                    <button class="learn-more-btn" data-service="custom">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <!-- PSD to HTML -->
+                <!-- E-commerce -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2721/2721287.png" alt="PSD to HTML" class="card-img">
-                    <h3>PSD to HTML Conversion</h3>
-                    <p>PSD to HTML Development (Front End Development) Static HTML Web Page If you have a PSD design</p>
-                    <button class="learn-more-btn" data-service="psd">Learn More <i class="fas fa-arrow-right"></i></button>
-                </div>
-
-                <!-- Ecommerce -->
-                <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Ecommerce" class="card-img">
-                    <h3>Ecommerce Website</h3>
-                    <p>Rated #1 eCommerce Web Designing & Development Company In India E-Commerce Market In India is...</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3663/3663346.png" alt="E-commerce" class="card-img">
+                    <h3>E-commerce Solutions</h3>
+                    <p>Powerful online stores with secure payment gateways, inventory management, and conversion optimization.</p>
                     <button class="learn-more-btn" data-service="ecommerce">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Responsive -->
+                <!-- Web Applications -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" alt="Responsive Design" class="card-img">
-                    <h3>Responsive Web Designing</h3>
-                    <p>Develop your websites using latest bootstrap technology to make compatible in all devices...</p>
-                    <button class="learn-more-btn" data-service="responsive">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2885/2885417.png" alt="Web Applications" class="card-img">
+                    <h3>Web Applications</h3>
+                    <p>Interactive web apps with dynamic functionality, user authentication, and real-time data processing.</p>
+                    <button class="learn-more-btn" data-service="webapps">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Landing Page -->
+                <!-- CMS Development -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3249/3249057.png" alt="Landing Page" class="card-img">
-                    <h3>Landing Page Designing</h3>
-                    <p>Landing Page Designing by – Solidale Infotech PVT.LTD Awarded Best Company in India A creative...</p>
-                    <button class="learn-more-btn" data-service="landing">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2772/2772128.png" alt="CMS Development" class="card-img">
+                    <h3>CMS Development</h3>
+                    <p>Custom WordPress, Shopify, and other CMS solutions with tailored themes and plugin development.</p>
+                    <button class="learn-more-btn" data-service="cms">Learn More <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Custom Website -->
+                <!-- API Integration -->
                 <div class="service-card">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Custom Website" class="card-img">
-                    <h3>Custom Website Designing</h3>
-                    <p>Get a award winning all new look website that stands out from the competition. Understanding your business...</p>
-                    <button class="learn-more-btn" data-service="custom">Learn More <i class="fas fa-arrow-right"></i></button>
+                    <img src="https://cdn-icons-png.flaticon.com/512/2489/2489719.png" alt="API Integration" class="card-img">
+                    <h3>API Integration</h3>
+                    <p>Seamless integration with third-party services, payment processors, and enterprise systems.</p>
+                    <button class="learn-more-btn" data-service="api">Learn More <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Maintenance -->
+                <div class="service-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2282/2282272.png" alt="Maintenance" class="card-img">
+                    <h3>Website Maintenance</h3>
+                    <p>Ongoing updates, security patches, performance optimization, and technical support services.</p>
+                    <button class="learn-more-btn" data-service="maintenance">Learn More <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Our Recent Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="E-commerce Site" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h3>Luxury Fashion E-commerce</h3>
+                        <p>High-end fashion retail platform with AR try-on feature and personalized recommendations.</p>
+                        <a href="#" class="portfolio-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="SaaS Platform" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h3>Marketing SaaS Platform</h3>
+                        <p>All-in-one marketing automation tool with analytics dashboard and campaign management.</p>
+                        <a href="#" class="portfolio-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Healthcare Portal" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h3>Healthcare Patient Portal</h3>
+                        <p>Secure patient management system with telehealth integration and prescription tracking.</p>
+                        <a href="#" class="portfolio-link">View Project →</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -736,176 +839,174 @@
 
             // Service content data
             const servicesData = {
-                corporate: {
-                    title: "Corporate Website Development",
+                custom: {
+                    title: "Custom Website Development",
                     content: `
                         <div class="service-details">
-                            <h3>Professional Corporate Websites</h3>
-                            <p>Our corporate website designs help businesses establish a strong online presence with professional, lead-generating websites that reflect your brand identity.</p>
+                            <h3>Tailored Web Solutions</h3>
+                            <p>We build completely custom websites designed specifically for your business needs and brand identity.</p>
                             
                             <h4>Key Features:</h4>
                             <ul>
-                                <li>Modern, responsive design that works on all devices</li>
-                                <li>SEO-optimized structure for better search rankings</li>
-                                <li>Lead capture forms and call-to-action elements</li>
-                                <li>Integration with CRM and marketing tools</li>
-                                <li>Content management system for easy updates</li>
-                                <li>Fast loading times and optimized performance</li>
-                            </ul>
-                            
-                            <h4>Our Process:</h4>
-                            <p>With over 7 years of excellence in corporate website development, we follow a proven process:</p>
-                            <ol>
-                                <li>Requirement analysis and planning</li>
-                                <li>UI/UX design tailored to your industry</li>
-                                <li>Development with latest technologies</li>
-                                <li>Quality assurance and testing</li>
-                                <li>Deployment and post-launch support</li>
-                            </ol>
-                        </div>
-                    `
-                },
-                psd: {
-                    title: "PSD to HTML Conversion",
-                    content: `
-                        <div class="service-details">
-                            <h3>Precision PSD to HTML Conversion</h3>
-                            <p>Transform your Photoshop designs into pixel-perfect, responsive HTML websites with our expert PSD to HTML conversion services.</p>
-                            
-                            <h4>Our Services Include:</h4>
-                            <ul>
-                                <li>Pixel-perfect conversion from PSD to HTML/CSS</li>
-                                <li>Fully responsive designs for all devices</li>
-                                <li>Clean, semantic, and W3C validated code</li>
+                                <li>100% unique design (no templates)</li>
+                                <li>Mobile-first responsive development</li>
+                                <li>SEO-optimized architecture</li>
+                                <li>Custom functionality development</li>
+                                <li>Performance optimization</li>
                                 <li>Cross-browser compatibility</li>
-                                <li>Optimized for fast loading speeds</li>
-                                <li>Integration with CMS like WordPress if needed</li>
                             </ul>
                             
-                            <h4>Why Choose Us?</h4>
+                            <h4>Technologies We Use:</h4>
                             <ul>
-                                <li>15+ years of experience in front-end development</li>
-                                <li>Hand-coded solutions (no automated tools)</li>
-                                <li>Attention to every design detail</li>
-                                <li>SEO-friendly code structure</li>
-                                <li>Quick turnaround time</li>
-                                <li>Ongoing support and maintenance</li>
+                                <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                                <li>React.js, Vue.js, Angular</li>
+                                <li>Node.js, Python, PHP</li>
+                                <li>MongoDB, PostgreSQL, MySQL</li>
+                                <li>GraphQL, REST APIs</li>
+                                <li>Webpack, Babel, Sass</li>
                             </ul>
                         </div>
                     `
                 },
                 ecommerce: {
-                    title: "Ecommerce Website Development",
+                    title: "E-commerce Development",
                     content: `
                         <div class="service-details">
-                            <h3>Powerful Ecommerce Solutions</h3>
-                            <p>As India's #1 rated eCommerce web design company, we create online stores that drive sales and provide exceptional shopping experiences.</p>
+                            <h3>Powerful Online Stores</h3>
+                            <p>We develop high-converting e-commerce websites with all the features you need to sell online successfully.</p>
                             
-                            <h4>Our Ecommerce Solutions:</h4>
+                            <h4>E-commerce Features:</h4>
                             <ul>
-                                <li>Custom eCommerce website design and development</li>
-                                <li>Platforms: WooCommerce, Magento, Shopify, Custom</li>
-                                <li>Mobile-optimized shopping experiences</li>
-                                <li>Secure payment gateway integration</li>
-                                <li>Inventory and order management systems</li>
-                                <li>Marketing tools and analytics integration</li>
+                                <li>Product catalog management</li>
+                                <li>Secure payment gateways integration</li>
+                                <li>Shopping cart and checkout system</li>
+                                <li>Inventory and order management</li>
+                                <li>Customer accounts and reviews</li>
+                                <li>Shipping and tax calculation</li>
                             </ul>
                             
-                            <h4>Ecommerce Features:</h4>
+                            <h4>Platforms We Work With:</h4>
                             <ul>
-                                <li>Product catalogs with advanced filtering</li>
-                                <li>User accounts and wishlists</li>
-                                <li>Multiple payment options</li>
-                                <li>Shipping calculator and tax settings</li>
-                                <li>Multi-language and currency support</li>
-                                <li>SEO optimization for product pages</li>
+                                <li>Custom e-commerce solutions</li>
+                                <li>Shopify development</li>
+                                <li>WooCommerce (WordPress)</li>
+                                <li>Magento/Adobe Commerce</li>
+                                <li>BigCommerce</li>
+                                <li>Headless commerce solutions</li>
                             </ul>
                         </div>
                     `
                 },
-                responsive: {
-                    title: "Responsive Web Design",
+                webapps: {
+                    title: "Web Application Development",
                     content: `
                         <div class="service-details">
-                            <h3>Responsive Web Design Services</h3>
-                            <p>We develop your websites using the latest Bootstrap technology to ensure perfect compatibility across all devices and screen sizes.</p>
+                            <h3>Interactive Web Applications</h3>
+                            <p>We build dynamic web applications with complex functionality and seamless user experiences.</p>
                             
-                            <h4>Our Responsive Approach:</h4>
+                            <h4>Web App Capabilities:</h4>
                             <ul>
-                                <li>Mobile-first design philosophy</li>
-                                <li>Fluid grid layouts that adapt to any screen</li>
-                                <li>Flexible images and media</li>
-                                <li>Touch-friendly navigation elements</li>
-                                <li>Performance optimization for mobile</li>
-                                <li>Cross-device testing and quality assurance</li>
+                                <li>User authentication and authorization</li>
+                                <li>Real-time data processing</li>
+                                <li>Interactive dashboards</li>
+                                <li>Complex form handling</li>
+                                <li>Data visualization</li>
+                                <li>API integrations</li>
                             </ul>
                             
-                            <h4>Benefits of Responsive Design:</h4>
+                            <h4>Types of Web Apps We Build:</h4>
                             <ul>
-                                <li>Single website for all devices</li>
-                                <li>Improved user experience across devices</li>
-                                <li>Better SEO performance</li>
-                                <li>Easier to maintain and update</li>
-                                <li>Future-proof as new devices emerge</li>
-                                <li>Higher conversion rates</li>
+                                <li>SaaS platforms</li>
+                                <li>CRM and ERP systems</li>
+                                <li>Project management tools</li>
+                                <li>Collaboration platforms</li>
+                                <li>Data analytics dashboards</li>
+                                <li>Custom business solutions</li>
                             </ul>
                         </div>
                     `
                 },
-                landing: {
-                    title: "Landing Page Design",
+                cms: {
+                    title: "CMS Development",
                     content: `
                         <div class="service-details">
-                            <h3>High-Converting Landing Pages</h3>
-                            <p>As an awarded best company in India for landing page design, we create focused, conversion-optimized pages that drive results.</p>
+                            <h3>Content Management Solutions</h3>
+                            <p>We create easy-to-manage websites with powerful content management capabilities.</p>
                             
-                            <h4>Our Landing Page Services:</h4>
+                            <h4>CMS Features:</h4>
                             <ul>
-                                <li>Single-page and multi-page landing designs</li>
-                                <li>A/B testing and optimization</li>
-                                <li>Clear value propositions and CTAs</li>
-                                <li>Lead capture form integration</li>
-                                <li>Loading speed optimization</li>
-                                <li>Integration with marketing automation tools</li>
+                                <li>Custom theme development</li>
+                                <li>Plugin/module customization</li>
+                                <li>Headless CMS implementations</li>
+                                <li>Multi-language support</li>
+                                <li>User role management</li>
+                                <li>Content versioning</li>
                             </ul>
                             
-                            <h4>What Makes Our Landing Pages Effective:</h4>
+                            <h4>Platforms We Specialize In:</h4>
                             <ul>
-                                <li>Strategic layout guiding visitors to convert</li>
-                                <li>Compelling headlines and persuasive copy</li>
-                                <li>Trust elements (testimonials, certifications)</li>
-                                <li>Minimal distractions and exit points</li>
-                                <li>Mobile-optimized designs</li>
-                                <li>Analytics and conversion tracking</li>
+                                <li>WordPress (custom themes/plugins)</li>
+                                <li>Shopify (theme development)</li>
+                                <li>Drupal</li>
+                                <li>Joomla</li>
+                                <li>Strapi</li>
+                                <li>Contentful</li>
                             </ul>
                         </div>
                     `
                 },
-                custom: {
-                    title: "Custom Website Design",
+                api: {
+                    title: "API Integration",
                     content: `
                         <div class="service-details">
-                            <h3>Bespoke Website Solutions</h3>
-                            <p>Get an award-winning, all-new look website that stands out from the competition. We take time to understand your business needs and create truly custom solutions.</p>
+                            <h3>Seamless System Integration</h3>
+                            <p>We connect your website with external services and internal systems through secure API integrations.</p>
                             
-                            <h4>Our Custom Design Process:</h4>
+                            <h4>Integration Services:</h4>
+                            <ul>
+                                <li>Payment gateway integration</li>
+                                <li>CRM/ERP system connections</li>
+                                <li>Marketing automation tools</li>
+                                <li>Shipping and logistics APIs</li>
+                                <li>Social media platform APIs</li>
+                                <li>Custom API development</li>
+                            </ul>
+                            
+                            <h4>Our Integration Approach:</h4>
                             <ol>
-                                <li>Discovery session to understand your goals</li>
-                                <li>Competitor analysis and market research</li>
-                                <li>Custom UI/UX design tailored to your audience</li>
-                                <li>Development with the right technology stack</li>
-                                <li>Quality assurance and performance testing</li>
-                                <li>Launch and ongoing optimization</li>
+                                <li>Requirement analysis</li>
+                                <li>API documentation review</li>
+                                <li>Authentication setup</li>
+                                <li>Endpoint integration</li>
+                                <li>Data mapping and transformation</li>
+                                <li>Testing and error handling</li>
                             </ol>
+                        </div>
+                    `
+                },
+                maintenance: {
+                    title: "Website Maintenance",
+                    content: `
+                        <div class="service-details">
+                            <h3>Ongoing Support & Maintenance</h3>
+                            <p>We provide comprehensive website maintenance services to keep your site secure, fast, and up-to-date.</p>
                             
-                            <h4>Custom Website Features:</h4>
+                            <h4>Maintenance Services:</h4>
                             <ul>
-                                <li>Unique design reflecting your brand identity</li>
-                                <li>Tailored functionality for your specific needs</li>
-                                <li>Scalable architecture for future growth</li>
-                                <li>Advanced integrations with your systems</li>
-                                <li>Custom content management solutions</li>
-                                <li>Ongoing support and maintenance</li>
+                                <li>Regular security updates</li>
+                                <li>Performance optimization</li>
+                                <li>Content updates and changes</li>
+                                <li>Backup management</li>
+                                <li>Uptime monitoring</li>
+                                <li>Emergency support</li>
+                            </ul>
+                            
+                            <h4>Our Maintenance Plans:</h4>
+                            <ul>
+                                <li><strong>Basic:</strong> Security updates, monthly backups</li>
+                                <li><strong>Standard:</strong> Weekly updates, performance checks</li>
+                                <li><strong>Premium:</strong> Daily monitoring, content updates</li>
+                                <li><strong>Enterprise:</strong> Dedicated support, SLA guarantees</li>
                             </ul>
                         </div>
                     `
@@ -957,7 +1058,7 @@
             });
 
             // Animate elements when they come into view
-            const animateElements = document.querySelectorAll('.service-card, .section-title');
+            const animateElements = document.querySelectorAll('.service-card, .section-title, .portfolio-item');
             
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
